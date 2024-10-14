@@ -33,7 +33,6 @@
             <c:when test="${sessionScope.gameSession.gameOver}">
                 <h2>Конец игры</h2>
                 <p>${sessionScope.gameSession.gameResult}</p>
-                <p>Количество сыгранных игр: ${sessionScope.gameSession.gamesPlayed}</p>
                 <button type="submit" name="restart">Начать заново</button>
             </c:when>
             <c:otherwise>
