@@ -16,7 +16,7 @@ public class GameServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("game.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/jsp/game.jsp").forward(req, resp);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -31,9 +31,11 @@ public class GameServlet extends HttpServlet {
         }
 
         String choice = req.getParameter("choice");
-        System.out.println("Пользовательский выбор: " + choice);
 
         if (choice != null) {
+            if ("secret".equals(choice)) {
+                gameSession.setSecretEndingFound(true);
+            }
             GameService.makeChoice(gameSession, choice);
         }
 
@@ -51,6 +53,6 @@ public class GameServlet extends HttpServlet {
 
         req.setAttribute("nameLength", gameSession.getPlayerName().length());
 
-        req.getRequestDispatcher("game.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/jsp/game.jsp").forward(req, resp);
     }
 }

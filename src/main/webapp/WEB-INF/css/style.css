@@ -1,0 +1,153 @@
+/* Основной стиль для страницы */
+body {
+    background-color: #f5f5f5; /* Светло-серый фон */
+    color: #333; /* Темно-серый текст */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    color: #444; /* Немного темнее для заголовков */
+    text-align: center;
+}
+
+/* Стиль для текста повествования и выборов */
+.narrative-text {
+    font-size: 18px; /* Увеличенный шрифт */
+    font-weight: bold; /* Жирный шрифт для важности */
+    color: #222; /* Более темный цвет для повествования */
+    margin: 20px 0;
+    line-height: 1.8; /* Легко читаемое межстрочное расстояние */
+    text-align: justify; /* Выравнивание текста для лучшего восприятия */
+}
+
+/* Фиксированные размеры кнопок */
+button {
+    background-color: #4d79ff; /* Нейтральный синий */
+    color: white;
+    border: 2px solid #888; /* Серая обводка */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 300px; /* Фиксированная ширина для всех кнопок */
+    height: 50px; /* Фиксированная высота */
+    text-align: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #3a5dc7; /* Более темный синий при наведении */
+    border-color: #555; /* Темнее обводка при наведении */
+}
+
+/* Центрирование формы с кнопками */
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #e0e0e0; /* Светло-серая текстура */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Центрирование содержимого */
+}
+
+/* Секретная кнопка */
+.secret-button {
+    background-color: transparent; /* Убираем цвет фона */
+    color: #e0e0e0; /* Цвет, совпадающий с обводкой остальных кнопок */
+    border: none; /* Убираем обводку */
+    cursor: pointer;
+    width: 300px;
+    height: 50px;
+}
+
+.secret-button:hover {
+    color: #ffffff;
+}
+
+hr {
+    border: none; /* Убираем стандартную границу */
+    height: 2px; /* Толщина линии */
+    background-color: #888; /* Цвет линии */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    opacity: 0.7; /* Полупрозрачность */
+}
+
+.user-statistics {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f0f0; /* Легкий серый фон */
+    border-left: 4px solid #4d79ff; /* Цветная левая граница для акцента */
+    border-radius: 5px;
+    width: 100%; /* Используем всю ширину родительского блока */
+    font-size: 14px;
+    color: #333; /* Темный цвет для текста */
+    font-family: 'Courier New', Courier, monospace; /* Шрифт для эффекта кода */
+    text-align: justify; /* Выровнять текст по ширине */
+}
+
+.user-statistics p {
+    margin: 5px 0;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.user-statistics span {
+    font-weight: bold;
+    color: #4d79ff; /* Синий цвет для ключевых данных */
+}
+
+/* Статус не найденной секретной концовки — красный */
+.secret-ending-status.not-found {
+    color: red;
+    font-weight: bold;
+}
+
+/* Статус найденной секретной концовки — зеленый */
+.secret-ending-status.found {
+    color: green;
+    font-weight: bold;
+}
+
+/* Заголовок на странице приветствия */
+.welcome-title {
+    font-size: 28px;
+    color: #4d79ff; /* Цвет заголовка */
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Стили для формы на странице приветствия */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.form-container input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+    border: 2px solid #888;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    background-color: #4d79ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-container button:hover {
+    background-color: #3a5dc7;
+}
+
